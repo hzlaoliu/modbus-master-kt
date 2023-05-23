@@ -12,6 +12,14 @@ buildscript {
         // in the individual module build.gradle files
     }
 }
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        jcenter()
+        maven { url 'https://jitpack.io' }
+    }
+}
 
 task clean(type: Delete) {
     delete rootProject.buildDir
@@ -21,6 +29,6 @@ ext{
     lifecycle_version = "2.3.1"
     kotlin_version = "1.6.0"
 
-    publishingVersion='0.0.3'
+    publishingVersion='0.0.4'
     publishingGroupId='com.github.hzlaoliu'
 }
