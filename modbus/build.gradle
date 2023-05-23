@@ -47,9 +47,9 @@ afterEvaluate {
             // Creates a Maven publication called "release".
             release(MavenPublication) {
                 from components.release
-                groupId = rootProject.publishingGroupId
-                artifactId = project.name
-                version = rootProject.publishingVersion
+                groupId = 'com.github.hzlaoliu'
+                artifactId = 'modbus-master-kt'
+                version = '0.0.5'
             }
         }
     }
