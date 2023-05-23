@@ -20,4 +20,7 @@ ext{
     versionName="1.0.1"
     lifecycle_version = "2.3.1"
     kotlin_version = "1.6.0"
+
+    publishingVersion='0.0.14'
+    publishingGroupId='com.github.hzlaoliu'
 }

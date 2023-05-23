@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
+    id 'maven-publish'
 }
 
 android {
@@ -38,4 +39,18 @@ dependencies {
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$rootProject.kotlin_version"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$rootProject.kotlin_version"
 //    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            // Creates a Maven publication called "release".
+            release(MavenPublication) {
+                from components.release
+                groupId = rootProject.publishingGroupId
+                artifactId = project.name
+                version = rootProject.publishingVersion
+            }
+        }
+    }
 }
