@@ -48,7 +48,7 @@ afterEvaluate {
             release(MavenPublication) {
                 from components.release
                 groupId = 'com.github.hzlaoliu'
-                artifactId = 'modbus-master-kt'
+                artifactId = 'modbus'
                 version = '0.0.5'
             }
         }

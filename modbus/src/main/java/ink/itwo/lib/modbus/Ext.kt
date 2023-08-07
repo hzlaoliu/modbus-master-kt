@@ -12,6 +12,7 @@ data class ModBusMaserConfig(
     val retryTime: Long = 0,
     val loggerPrefix: String = "Modbus ",
     val logger: ((String) -> Unit)? = null,
+    val fold: (suspend (ByteArray) -> ByteArray?)? = null,
 )
 
 
